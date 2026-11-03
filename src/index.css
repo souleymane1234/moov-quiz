@@ -1,0 +1,214 @@
+:root {
+  --color-primary: #f58220;
+  --color-primary-hover: #d96e12;
+  --color-secondary: #009a44;
+  --color-accent: #ffc107;
+  --color-dark: #0b1f3a;
+  --color-dark-secondary: #102a4d;
+  --color-white: #ffffff;
+  --color-background: #f9fafb;
+  --color-background-secondary: #f5f5f5;
+  --color-border: #e5e7eb;
+  --color-text: #222222;
+  --color-text-muted: #6b7280;
+
+  --cat-industry: #f58220;
+  --cat-mobility: #2563eb;
+  --cat-digital: #6366f1;
+  --cat-agritech: #16a34a;
+  --cat-creative: #db2777;
+
+  --radius-btn: 8px;
+  --radius-input: 8px;
+  --radius-card: 16px;
+  --radius-media: 16px;
+  --radius-media-lg: 24px;
+  --radius-badge: 999px;
+  --radius-panel: 24px;
+
+  --shadow: 0 10px 30px rgb(0 0 0 / 0.06);
+  --shadow-hover: 0 20px 40px rgb(0 0 0 / 0.1);
+
+  --container: 1280px;
+  --container-pad: 24px;
+  --navbar-height: 132px;
+  --space-section: 12px;
+
+  --ease: 0.25s ease;
+
+  /* Compatibilité avec les composants existants */
+  --text: var(--color-text-muted);
+  --text-h: var(--color-text);
+  --bg: var(--color-white);
+  --border: var(--color-border);
+  --code-bg: var(--color-background-secondary);
+  --accent: var(--color-primary);
+  --accent-bg: color-mix(in srgb, var(--color-primary) 12%, transparent);
+  --accent-border: color-mix(in srgb, var(--color-primary) 45%, transparent);
+  --social-bg: var(--color-background);
+  --ws-blue: var(--color-dark);
+  --ws-blue-deep: var(--color-dark-secondary);
+  --ws-orange: var(--color-primary);
+  --ws-green: var(--color-secondary);
+  --gold: var(--color-primary);
+  --gold-deep: var(--color-primary-hover);
+  --gold-light: var(--color-accent);
+  --gold-line: color-mix(in srgb, var(--color-primary) 35%, transparent);
+  --gold-glow: color-mix(in srgb, var(--color-primary) 35%, transparent);
+
+  --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --heading: 'Montserrat', var(--sans);
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 16px/1.6 var(--sans);
+  letter-spacing: 0;
+  color-scheme: light;
+  color: var(--color-text);
+  background: var(--color-white);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --container-pad: 20px;
+    --navbar-height: 88px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --container-pad: 16px;
+    --navbar-height: 64px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#accueil,
+#actualites,
+#alertes,
+#play,
+#metiers,
+#competition,
+#concours,
+#edition,
+#partenariat,
+#contact,
+#chiffres,
+#inscriptions {
+  scroll-margin-top: calc(var(--navbar-height) + 8px);
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-inline: 0;
+  text-align: center;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow-x: clip;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+  font-family: var(--sans);
+  color: var(--color-text);
+  background: var(--color-white);
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading);
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 3.4vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin: 0 0 16px;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+
+h3 {
+  font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+h4 {
+  font-size: clamp(1.125rem, 1.6vw, 1.5rem);
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+p {
+  margin: 0;
+}
+
+code {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--color-text);
+  font-size: 14px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--color-background-secondary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}

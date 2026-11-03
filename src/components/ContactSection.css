@@ -1,0 +1,260 @@
+.ws-contact {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: var(--space-section) var(--container-pad);
+  background: var(--color-background);
+  border-top: 1px solid var(--border);
+  text-align: left;
+  overflow-x: clip;
+}
+
+.ws-contact--embedded {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: var(--space-section) var(--container-pad);
+  background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+  border: 1px solid color-mix(in srgb, var(--color-border) 82%, #fff);
+  border-radius: var(--radius-panel);
+}
+
+.ws-contact__inner {
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+.ws-contact__intro {
+  max-width: 52rem;
+  margin-bottom: 22px;
+}
+
+.ws-contact__eyebrow {
+  margin: 0 0 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.ws-contact__inner h2 {
+  margin: 0 0 12px;
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+}
+
+.ws-contact__lead {
+  margin: 0 0 24px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.ws-contact__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+}
+
+.ws-contact__card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--color-white) 90%, #eef5ff) 0%, #fff 100%);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.ws-contact__card h3 {
+  margin: 0 0 12px;
+  font-size: 1.08rem;
+}
+
+.ws-contact__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: -2px 0 14px;
+}
+
+.ws-contact__badges span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ws-blue);
+  border: 1px solid color-mix(in srgb, var(--ws-blue) 18%, #fff);
+  background: color-mix(in srgb, var(--ws-blue) 6%, #fff);
+}
+
+.ws-contact__form-intro {
+  margin: -4px 0 12px;
+  color: var(--text);
+  font-size: 0.93rem;
+  line-height: 1.5;
+}
+
+.ws-contact__channels {
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ws-contact__channels li {
+  display: grid;
+  gap: 5px;
+  font-size: 0.95rem;
+  color: var(--text);
+  padding: 10px 12px;
+  border: 1px solid color-mix(in srgb, var(--border) 75%, #fff);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--color-background) 65%, #fff);
+}
+
+.ws-contact__channels strong {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-h);
+}
+
+.ws-contact__channels a {
+  color: var(--ws-blue);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.ws-contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ws-contact__form {
+  display: grid;
+  gap: 12px;
+}
+
+.ws-contact__form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.ws-contact__form label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.ws-contact__form input,
+.ws-contact__form select,
+.ws-contact__form textarea {
+  width: 100%;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-input);
+  padding: 12px 16px;
+}
+
+.ws-contact__form input:focus,
+.ws-contact__form select:focus,
+.ws-contact__form textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgb(245 130 32 / 0.15);
+}
+
+.ws-contact__consent {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 8px;
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.ws-contact__consent input {
+  margin-top: 2px;
+}
+
+.ws-contact__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 14px 24px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-btn);
+  font-family: var(--heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.ws-contact__btn--primary {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.ws-contact__btn--ghost {
+  border: 1px solid var(--border);
+  color: var(--text-h);
+  background: var(--bg);
+}
+
+.ws-contact__btn:hover {
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+.ws-contact__btn--ghost:hover {
+  background: var(--color-background);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.ws-contact__form .ws-contact__btn {
+  width: 100%;
+  box-shadow: none !important;
+  filter: none !important;
+  transform: none !important;
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+}
+
+@media (max-width: 900px) {
+  .ws-contact__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ws-contact__form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .ws-contact--embedded {
+    border-radius: 18px;
+  }
+}

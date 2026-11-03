@@ -1,0 +1,87 @@
+.ws-play-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 8px 16px 8px 12px;
+  border-radius: 10px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid rgb(255 255 255 / 0.18);
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.22);
+  transition: transform var(--ease), background var(--ease), border-color var(--ease);
+}
+
+.ws-play-btn:hover {
+  transform: translateY(-2px);
+  background: #111;
+  border-color: rgb(255 255 255 / 0.35);
+}
+
+.ws-play-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.ws-play-btn__icon {
+  display: grid;
+  place-items: center;
+  line-height: 0;
+  flex-shrink: 0;
+}
+
+.ws-play-btn__icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.ws-play-btn__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  line-height: 1.1;
+}
+
+.ws-play-btn__caption {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.75);
+}
+
+.ws-play-btn__label {
+  font-family: var(--heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.ws-play-btn--compact {
+  min-height: 42px;
+  padding: 6px 14px 6px 10px;
+  gap: 8px;
+  box-shadow: none;
+}
+
+.ws-play-btn--compact .ws-play-btn__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.ws-play-btn--compact .ws-play-btn__label {
+  font-size: 0.95rem;
+}
+
+/* Variante footer (fond clair) */
+.ws-play-btn--footer {
+  background: var(--color-dark);
+  border-color: color-mix(in srgb, var(--color-dark) 80%, #fff);
+  box-shadow: 0 6px 16px rgb(11 31 58 / 0.12);
+}
+
+.ws-play-btn--footer:hover {
+  background: var(--color-dark-secondary);
+}

@@ -1,0 +1,42 @@
+.section-bridge {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.section-bridge--wave {
+  height: 24px;
+  margin: 0;
+  line-height: 0;
+  pointer-events: none;
+  background: transparent;
+}
+
+.section-bridge--wave::after {
+  display: none;
+}
+
+.section-bridge__svg {
+  display: none;
+}
+
+.section-bridge__fill {
+  fill: var(--bg);
+}
+
+.section-bridge__line {
+  stroke: var(--color-border);
+}
+
+.section-bridge--ribbon {
+  height: 1px;
+  margin: 0;
+  background: var(--color-border);
+  box-shadow: none;
+}
+
+.section-bridge--ribbon::before {
+  display: none;
+}
